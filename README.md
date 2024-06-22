@@ -7,9 +7,9 @@ Uma plataforma que potencializa o professor e prepara os jovens para o futuro.
 </h3>
 
 <br>
-https://edukae.com.br/
+https://edukae.com.br
 <br><br>
-[LinkedIn](https://www.linkedin.com/company/edukae/)
+[LinkedIn](https://www.linkedin.com/company/edukae)
 
 # Sobre
 

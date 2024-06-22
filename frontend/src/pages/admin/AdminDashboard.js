@@ -15,6 +15,7 @@ import { AppBar, Drawer } from '../../components/styles';
 import Logout from '../Logout';
 import SideBar from './SideBar';
 import AdminProfile from './AdminProfile';
+import AdminPlanAula from './AdminPlanAula';
 import AdminHomePage from './AdminHomePage';
 
 import AddStudent from './studentRelated/AddStudent';
@@ -96,6 +97,7 @@ const AdminDashboard = () => {
                         <Route path='*' element={<Navigate to="/" />} />
                         <Route path="/Admin/dashboard" element={<AdminHomePage />} />
                         <Route path="/Admin/profile" element={<AdminProfile />} />
+                        <Route path="/Admin/planAula" element={<AdminPlanAula />} />
                         <Route path="/Admin/complains" element={<SeeComplains />} />
 
                         {/* Notice */}

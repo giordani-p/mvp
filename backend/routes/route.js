@@ -31,11 +31,10 @@ router.post('/AdminLogin', adminLogIn);
 
 router.get("/Admin/:id", getAdminDetail)
 // router.delete("/Admin/:id", deleteAdmin)
-
 // router.put("/Admin/:id", updateAdmin)
 
-// Student
 
+// Student
 router.post('/StudentReg', studentRegister);
 router.post('/StudentLogin', studentLogIn)
 

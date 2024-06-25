@@ -139,7 +139,7 @@ const LoginPage = ({ role }) => {
                             {role} Login
                         </Typography>
                         <Typography variant="h7">
-                            Welcome back! Please enter your details
+                            Bem vindo de volta! Por favor insira seus dados
                         </Typography>
                         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 2 }}>
                             {role === "Student" ? (
@@ -287,5 +287,5 @@ export default LoginPage
 const StyledLink = styled(Link)`
   margin-top: 9px;
   text-decoration: none;
-  color: #7f56da;
+  color: #3449bf;
 `;

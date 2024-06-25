@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import {
     CssBaseline,
     Box,
@@ -12,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { AppBar, Drawer } from '../../components/styles';
+import Logo from '../../assets/logo.png'
 import Logout from '../Logout';
 import SideBar from './SideBar';
 import AdminProfile from './AdminProfile';
@@ -43,7 +45,10 @@ import ClassDetails from './classRelated/ClassDetails';
 import ShowClasses from './classRelated/ShowClasses';
 import AccountMenu from '../../components/AccountMenu';
 
+
+
 const AdminDashboard = () => {
+    const { currentUser } = useSelector((state) => state.user);
     const [open, setOpen] = useState(false);
     const toggleDrawer = () => {
         setOpen(!open);
@@ -74,7 +79,7 @@ const AdminDashboard = () => {
                             noWrap
                             sx={{ flexGrow: 1 }}
                         >
-                            Admin Dashboard
+                           Bem-vindo: {currentUser.name}
                         </Typography>
                         <AccountMenu />
                     </Toolbar>
@@ -82,6 +87,7 @@ const AdminDashboard = () => {
                 <Drawer variant="permanent" open={open} sx={open ? styles.drawerStyled : styles.hideDrawer}>
                     <Toolbar sx={styles.toolBarStyled}>
                         <IconButton onClick={toggleDrawer}>
+                        <img src={Logo} alt='Edukae' className='logo' />
                             <ChevronLeftIcon />
                         </IconButton>
                     </Toolbar>
@@ -171,4 +177,5 @@ const styles = {
             display: 'none',
         },
     },
+
 }

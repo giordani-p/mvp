@@ -6,7 +6,7 @@ const Teacher = require('../models/teacherSchema.js');
 const Subject = require('../models/subjectSchema.js');
 const Notice = require('../models/noticeSchema.js');
 const Complain = require('../models/complainSchema.js');
-
+const openai = require('../models/openaiModel');
 // const adminRegister = async (req, res) => {
 //     try {
 //         const salt = await bcrypt.genSalt(10);
@@ -149,4 +149,28 @@ const getAdminDetail = async (req, res) => {
 
 // module.exports = { adminRegister, adminLogIn, getAdminDetail, deleteAdmin, updateAdmin };
 
-module.exports = { adminRegister, adminLogIn, getAdminDetail };
+// CALL FOR CHATBOT
+
+async function startChat(req, res) {
+    const { message } = req.body;
+  
+    if (!message) {
+      console.error('Request body missing "message" field');
+      return res.status(400).json({ error: 'Message is required' });
+    }
+  
+    try {
+      const response = await openai.chat.completions.create({
+        model: 'gpt-4',
+        messages: [{ role: 'user', content: message }],
+      });
+  
+      const reply = response.choices[0].message.content;
+      res.json({ reply });
+    } catch (error) {
+      console.error('Error processing OpenAI request:', error);
+      res.status(500).json({ error: 'An error occurred while processing your request' });
+    }
+  }
+
+module.exports = { adminRegister, adminLogIn, getAdminDetail, startChat };

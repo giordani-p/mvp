@@ -12,6 +12,11 @@ a {
   display: none;
 }
 
+.logo{
+  width: 160px;
+  height: 48px;
+}
+
 :root {
   --color-bg: #1f1f38;
   --color-bg-variant: #2c2c6c;

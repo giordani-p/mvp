@@ -3,23 +3,21 @@ import { Link } from 'react-router-dom';
 import { Container, Grid, Box, Button } from '@mui/material';
 import styled from 'styled-components';
 import Students from "../assets/students.svg";
-import { LightPurpleButton } from '../components/buttonStyles';
-
+import { BlueButton } from '../components/buttonStyles';
 const Homepage = () => {
     return (
         <StyledContainer>
             <Grid container spacing={0}>
                 <Grid item xs={12} md={6}>
-                    <img src={Students} alt="students" style={{ width: '100%' }} />
+                <img src={Students} alt="students" style={{ width: '100%' }} />
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <StyledPaper elevation={3}>
                         <StyledTitle>
                             Bem-vindo a
                             <br />
-                            Edukae
+                            Edukae! 
                             <br />
-                            Plataforma de Gestão Educacional
                         </StyledTitle>
                         <StyledText>
                         Uma plataforma que potencializa o
@@ -28,13 +26,13 @@ const Homepage = () => {
                         </StyledText>
                         <StyledBox>
                             <StyledLink to="/choose">
-                                <LightPurpleButton variant="contained" fullWidth>
+                                <BlueButton variant="contained" fullWidth>
                                     Entrar
-                                </LightPurpleButton>
+                                </BlueButton>
                             </StyledLink>
                             <StyledLink to="/chooseasguest">
                                 <Button variant="outlined" fullWidth
-                                    sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
+                                    sx={{ mt: 2, mb: 3, color: "#3449bf", borderColor: "#3449bf" }}
                                 >
                                     Entrar como convidado
                                 </Button>
@@ -42,7 +40,7 @@ const Homepage = () => {
                             <StyledText>
                                 Não tem uma conta?{' '}
                                 <Link to="/Adminregister" style={{color:"#550080"}}>
-                                Inscrever-se
+                                Inscrever-se1
                                 </Link>
                             </StyledText>
                         </StyledBox>

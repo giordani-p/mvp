@@ -34,6 +34,7 @@ A Edukae é uma plataforma educacional baseado na web construído usando a pilha
 - Frontend: React.js, Material UI, Redux
 - Backend: Node.js, Express.js
 - Database: MongoDB
+- OpenIA: ChatGPT
 
 <br>
 

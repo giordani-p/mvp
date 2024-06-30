@@ -40,7 +40,7 @@ const Homepage = () => {
                             <StyledText>
                                 Não tem uma conta?{' '}
                                 <Link to="/Adminregister" style={{color:"#550080"}}>
-                                Inscrever-se1
+                                Inscrever-se
                                 </Link>
                             </StyledText>
                         </StyledBox>
